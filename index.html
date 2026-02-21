@@ -371,6 +371,7 @@
 
         <div class="tabs">
             <button class="tab active" onclick="switchTab('overview')">📋 סקירה</button>
+            <button class="tab" onclick="switchTab('background')">📘 רקע</button>
             <button class="tab" onclick="switchTab('evidence')">💬 ראיות</button>
             <button class="tab" onclick="switchTab('timeline')">📅 ציר זמן</button>
             <button class="tab" onclick="switchTab('breach')">🚨 הפרת הסכם חד צדדית</button>
@@ -422,6 +423,56 @@
                     <button class="btn" onclick="switchTab('breach')" style="margin-top: 20px;">
                         צפה בראייה
                     </button>
+                </div>
+            </div>
+
+            <div id="background" class="tab-content">
+                <h2 style="font-size: 36px; margin-bottom: 30px;">📘 רקע המקרה</h2>
+                
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 30px;">
+                    <h3 style="font-size: 28px; margin-bottom: 15px;">📄 דו״ח רקע מקוצר</h3>
+                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 25px;">
+                        מסמך המפרט את היסטוריית השותפות, העבודה שבוצעה,<br>
+                        ההפרות החוזיות והבסיס המשפטי לתביעה
+                    </p>
+                    <a href="https://effrprhbrtplfxincfkb.supabase.co/storage/v1/object/public/documents/backround_short_report.docx" 
+                       target="_blank"
+                       download
+                       style="background: white; color: #667eea; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-size: 20px; font-weight: bold; display: inline-block; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.2);"
+                       onmouseover="this.style.transform='translateY(-3px) scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)'"
+                       onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)'">
+                        📥 הורד מסמך רקע (DOCX)
+                    </a>
+                </div>
+
+                <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <h3 style="color: #1976d2; font-size: 24px; margin-bottom: 20px;">📋 תוכן המסמך כולל:</h3>
+                    <ul style="font-size: 18px; line-height: 2; color: #333; list-style-position: inside;">
+                        <li>🤝 היסטוריית השותפות עם ד״ר רוני ספיר</li>
+                        <li>💼 פירוט העבודה שבוצעה (600 שעות)</li>
+                        <li>💰 פירוט ההוצאות והעמלות</li>
+                        <li>🚨 הפרות ההסכם החד צדדיות</li>
+                        <li>⚖️ הבסיס המשפטי לתביעה</li>
+                        <li>📊 סיכום החוב: ₪39,770</li>
+                    </ul>
+                </div>
+
+                <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #f57c00;">
+                    <h3 style="color: #e65100; font-size: 24px; margin-bottom: 15px;">⚡ נקודות מפתח</h3>
+                    <div style="font-size: 18px; line-height: 2; color: #333;">
+                        <p><strong>📅 תקופת העבודה:</strong> 6 חודשים (אוגוסט 2025 - פברואר 2026)</p>
+                        <p><strong>🎯 תוצרים:</strong> אתר קליניקה + אתר רטריט + 45 ראיות WhatsApp</p>
+                        <p><strong>💵 הכנסות שהניבה עבודתי:</strong> $7,500 (רטריט סרי לנקה)</p>
+                        <p><strong>🔴 תאריך הפרת האמונים:</strong> 14 בפברואר 2026</p>
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 30px; border-radius: 15px; text-align: center;">
+                    <p style="font-size: 18px; color: #2e7d32; line-height: 1.8;">
+                        ✅ מסמך זה מהווה חלק בלתי נפרד מתיק התביעה<br>
+                        ✅ המסמך מבוסס על ראיות מתועדות ותקשורת WhatsApp<br>
+                        ✅ כל הנתונים ניתנים לאימות וביסוס
+                    </p>
                 </div>
             </div>
 
