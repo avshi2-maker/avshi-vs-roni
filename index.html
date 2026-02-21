@@ -371,6 +371,7 @@
             <button class="tab" onclick="switchTab('evidence')">💬 ראיות</button>
             <button class="tab" onclick="switchTab('timeline')">📅 ציר זמן</button>
             <button class="tab" onclick="switchTab('breach')">🚨 הפרת הסכם חד צדדית</button>
+            <button class="tab" onclick="switchTab('invoices')">📄 חשבוניות</button>
             <button class="tab" onclick="switchTab('portfolio')">💼 עבודות</button>
         </div>
 
@@ -485,6 +486,74 @@
                     <p style="font-size: 24px; margin-top: 20px;">14 בפברואר 2026 - רטריט חדש ביוני מבלי לספר לי!</p>
                 </div>
                 <div id="breach-evidence" style="margin-top: 30px;"></div>
+            </div>
+
+            <div id="invoices" class="tab-content">
+                <h2 style="font-size: 36px; margin-bottom: 30px;">📄 חשבוניות ודרישות תשלום</h2>
+                
+                <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #2196f3;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                        <div>
+                            <h3 style="color: #1976d2; font-size: 24px; margin-bottom: 10px;">📄 חשבונית מס׳ 10005</h3>
+                            <p style="font-size: 20px; margin: 5px 0;"><strong>סכום:</strong> <span style="color: #c62828; font-size: 28px; font-weight: bold;">₪10,370</span></p>
+                            <p style="font-size: 16px; color: #666; margin: 5px 0;">תאריך הנפקה: 15 בפברואר 2026</p>
+                        </div>
+                        <a href="https://effrprhbrtplfxincfkb.supabase.co/storage/v1/object/public/invoices/invoice10005.pdf" 
+                           target="_blank" 
+                           style="background: #2196f3; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; transition: all 0.3s; display: inline-block;"
+                           onmouseover="this.style.background='#1976d2'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='#2196f3'; this.style.transform='translateY(0)'">
+                            💾 הורד חשבונית PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: #f3e5f5; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #7b1fa2;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                        <div>
+                            <h3 style="color: #7b1fa2; font-size: 24px; margin-bottom: 10px;">📄 חשבונית עסקה (פרופורמה) - עמלת רטריט</h3>
+                            <p style="font-size: 20px; margin: 5px 0;"><strong>סכום:</strong> <span style="color: #7b1fa2; font-size: 28px; font-weight: bold;">₪5,400</span></p>
+                            <p style="font-size: 16px; color: #666; margin: 5px 0;">תאריך הנפקה: 20 בפברואר 2026</p>
+                            <p style="font-size: 16px; color: #666; margin: 5px 0;">עמלה 20% על רטריט סרי לנקה (6 לקוחות × $1,250 = $7,500)</p>
+                        </div>
+                        <a href="https://effrprhbrtplfxincfkb.supabase.co/storage/v1/object/public/invoices/proforma_retreat_commission.pdf" 
+                           target="_blank" 
+                           style="background: #7b1fa2; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; transition: all 0.3s; display: inline-block;"
+                           onmouseover="this.style.background='#6a1b9a'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='#7b1fa2'; this.style.transform='translateY(0)'">
+                            💾 הורד חשבונית PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #f57c00;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                        <div>
+                            <h3 style="color: #e65100; font-size: 24px; margin-bottom: 10px;">📄 חשבונית עסקה (פרופורמה) - שעות עבודה</h3>
+                            <p style="font-size: 20px; margin: 5px 0;"><strong>סכום:</strong> <span style="color: #e65100; font-size: 28px; font-weight: bold;">₪24,000</span></p>
+                            <p style="font-size: 16px; color: #666; margin: 5px 0;">תאריך הנפקה: 20 בפברואר 2026</p>
+                            <p style="font-size: 16px; color: #666; margin: 5px 0;">600 שעות עבודה × ₪40 לשעה</p>
+                        </div>
+                        <a href="https://effrprhbrtplfxincfkb.supabase.co/storage/v1/object/public/invoices/proforma_workhours.pdf" 
+                           target="_blank" 
+                           style="background: #f57c00; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; transition: all 0.3s; display: inline-block;"
+                           onmouseover="this.style.background='#e65100'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='#f57c00'; this.style.transform='translateY(0)'">
+                            💾 הורד חשבונית PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 30px; border-radius: 15px; margin-top: 30px; text-align: center;">
+                    <h3 style="color: #2e7d32; font-size: 24px; margin-bottom: 15px;">💰 סיכום חוב</h3>
+                    <div style="font-size: 20px; color: #333; line-height: 2;">
+                        <p>חשבונית 10005: ₪10,370</p>
+                        <p>עמלת רטריט: ₪5,400</p>
+                        <p>שעות עבודה: ₪24,000</p>
+                        <hr style="border: 2px solid #4caf50; margin: 20px 0;">
+                        <p style="font-size: 32px; font-weight: bold; color: #2e7d32;">סה״כ: ₪39,770</p>
+                    </div>
+                </div>
             </div>
 
             <div id="portfolio" class="tab-content">
