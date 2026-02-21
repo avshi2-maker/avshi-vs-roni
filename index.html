@@ -1361,6 +1361,47 @@
                         <p style="font-size: 24px; font-weight: bold;">💵 עלות לרוני: ₪24,000 (67% הנחה!)</p>
                     </div>
                 </div>
+
+                <!-- EXTERNAL WORK LINKS SECTION -->
+                <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 30px 0; border: 3px solid #2196f3;">
+                    <h3 style="color: #1976d2; font-size: 28px; margin-bottom: 20px; text-align: center;">🌐 קישורים לעבודות - ראיות חיות!</h3>
+                    <p style="font-size: 16px; text-align: center; margin-bottom: 30px; color: #666;">
+                        👇 לחץ על הכפתורים להלן כדי לראות את האתרים החיים שבניתי עבור רוני
+                    </p>
+                    
+                    <!-- Main Projects Links -->
+                    <h4 style="color: #1976d2; margin: 30px 0 15px 0; font-size: 22px;">📊 פרויקטים ראשיים (7 אתרים!)</h4>
+                    <div id="mainProjectLinks" style="display: grid; gap: 15px;">
+                        <div style="text-align: center; padding: 20px; color: #999;">
+                            <p>⏳ טוען קישורים...</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Private Work Links -->
+                    <div style="background: #fff3e0; padding: 25px; border-radius: 10px; margin-top: 30px; border: 2px solid #f57c00;">
+                        <h4 style="color: #e65100; margin-bottom: 15px; font-size: 22px;">🎁 עבודות פרטיות לרוני (ללא תשלום!)</h4>
+                        <div style="background: #ffe0b2; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+                            <p style="font-size: 15px; line-height: 1.7; color: #e65100;">
+                                <strong>⚠️ חשוב:</strong> בנוסף לפרויקטים הראשיים, בניתי עבור רוני עבודות פרטיות 
+                                נוספות - <strong>ללא תשלום נוסף!</strong><br>
+                                זה מעבר ל-600 שעות שאני דורש תשלום עבורן.
+                            </p>
+                        </div>
+                        
+                        <div id="privateWorkLinks" style="display: grid; gap: 15px;">
+                            <div style="text-align: center; padding: 20px; color: #999;">
+                                <p>⏳ טוען קישורים...</p>
+                            </div>
+                        </div>
+                        
+                        <div style="background: #ffccbc; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
+                            <p style="font-size: 17px; color: #d84315; font-weight: bold;">
+                                💰 עבודות אלה שוות ₪3,000-5,000 בשוק!<br>
+                                רוני קיבל אותן בחינם!
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1827,6 +1868,97 @@
             document.getElementById('lastUpdated').textContent = hebrewDate;
         }
         updateLastModified();
+
+        // External Work Links Functions
+        async function loadExternalLinks() {
+            try {
+                const { data: mainProjects, error: mainError } = await sb
+                    .from('external_work')
+                    .select('*')
+                    .eq('category', 'main_project')
+                    .eq('is_active', true)
+                    .order('display_order');
+                
+                if (mainError) throw mainError;
+                
+                const { data: privateWork, error: privateError } = await sb
+                    .from('external_work')
+                    .select('*')
+                    .eq('category', 'private_work')
+                    .eq('is_active', true)
+                    .order('display_order');
+                
+                if (privateError) throw privateError;
+                
+                displayLinks(mainProjects, 'mainProjectLinks', 'main');
+                displayLinks(privateWork, 'privateWorkLinks', 'private');
+                
+            } catch (error) {
+                console.error('Error loading external links:', error);
+                const mainEl = document.getElementById('mainProjectLinks');
+                const privateEl = document.getElementById('privateWorkLinks');
+                if (mainEl) mainEl.innerHTML = '<p style="text-align: center; color: #d32f2f;">⚠️ שגיאה בטעינת קישורים</p>';
+                if (privateEl) privateEl.innerHTML = '<p style="text-align: center; color: #d32f2f;">⚠️ שגיאה בטעינת קישורים</p>';
+            }
+        }
+
+        function displayLinks(links, containerId, type) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            if (!links || links.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #999;">אין קישורים זמינים</p>';
+                return;
+            }
+            
+            const colors = type === 'main' ? {
+                bg: '#e3f2fd',
+                border: '#2196f3',
+                text: '#1976d2',
+                button: '#2196f3',
+                buttonHover: '#1976d2'
+            } : {
+                bg: '#fff3e0',
+                border: '#f57c00',
+                text: '#e65100',
+                button: '#f57c00',
+                buttonHover: '#e65100'
+            };
+            
+            let html = '';
+            links.forEach(link => {
+                html += `
+                    <div style="background: ${colors.bg}; padding: 20px; border-radius: 10px; border-right: 4px solid ${colors.border}; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                        <div style="flex: 1; min-width: 250px;">
+                            <h5 style="color: ${colors.text}; font-size: 18px; margin-bottom: 8px;">${link.title}</h5>
+                            <p style="font-size: 14px; color: #666; margin: 0;">${link.description || ''}</p>
+                        </div>
+                        <a href="${link.url}" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           style="background: ${colors.button}; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; transition: all 0.3s; white-space: nowrap;"
+                           onmouseover="this.style.background='${colors.buttonHover}'; this.style.transform='translateY(-2px)'"
+                           onmouseout="this.style.background='${colors.button}'; this.style.transform='translateY(0)'">
+                            🔗 צפה באתר →
+                        </a>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        const originalSwitchTab = switchTab;
+        switchTab = function(tabName) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            
+            if (tabName === 'portfolio') {
+                loadExternalLinks();
+            }
+        };
     </script>
 </body>
 </html>
