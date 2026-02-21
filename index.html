@@ -377,7 +377,8 @@
             <button class="tab" onclick="switchTab('timeline')">📅 ציר זמן</button>
             <button class="tab" onclick="switchTab('breach')">🚨 הפרת הסכם חד צדדית</button>
             <button class="tab" onclick="switchTab('invoices')">📄 חשבוניות</button>
-            <button class="tab" onclick="switchTab('portfolio')">💼 עבודות</button>
+            <button class="tab" onclick="switchTab('worksummary')">💼 סיכום עבודה</button>
+            <button class="tab" onclick="switchTab('portfolio')">🎯 תוצרים</button>
         </div>
 
         <div class="content">
@@ -712,19 +713,158 @@
                 </div>
 
                 <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #f57c00;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-                        <div>
-                            <h3 style="color: #e65100; font-size: 24px; margin-bottom: 10px;">📄 חשבונית עסקה (פרופורמה) - שעות עבודה</h3>
-                            <p style="font-size: 20px; margin: 5px 0;"><strong>סכום:</strong> <span style="color: #e65100; font-size: 28px; font-weight: bold;">₪24,000</span></p>
-                            <p style="font-size: 16px; color: #666; margin: 5px 0;">תאריך הנפקה: 20 בפברואר 2026</p>
-                            <p style="font-size: 16px; color: #666; margin: 5px 0;">600 שעות עבודה × ₪40 לשעה</p>
+                    <h3 style="color: #e65100; font-size: 28px; margin-bottom: 20px; text-align: center;">📄 פרופורמה - שעות עבודה (ניתוח מפורט)</h3>
+                    
+                    <div style="background: #ffe0b2; padding: 20px; border-radius: 10px; margin: 20px 0; border: 2px solid #f57c00;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">⚙️ פירוט שעות ועלויות</h4>
+                        <p style="font-size: 18px; margin: 10px 0;"><strong>סה״כ שעות עבודה:</strong> 600 שעות</p>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                            <p style="font-size: 16px; color: #d84315; margin-bottom: 10px;"><strong>📌 הבהרה קריטית:</strong></p>
+                            <p style="font-size: 14px; line-height: 1.7;">
+                                <strong>מחיר שעתי מעולם לא הוסכם בינינו.</strong><br>
+                                החישוב להלן הוא לצורך <u>הצגה הוגנת ושקופה</u> בלבד,<br>
+                                על מנת שבית המשפט יוכל להבין את שווי העבודה בשוק.
+                            </p>
                         </div>
+                    </div>
+                    
+                    <div style="background: #e3f2fd; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h4 style="color: #1976d2; margin-bottom: 15px;">📊 מחירון שוק רגיל</h4>
+                        <p style="font-size: 16px; margin: 8px 0;">מחיר שעה - מפתח בכיר: <strong>₪120/שעה</strong></p>
+                        <p style="font-size: 18px; margin: 8px 0;">600 שעות × ₪120 = <strong style="color: #d32f2f;">₪72,000</strong></p>
+                    </div>
+                    
+                    <div style="background: #fff9c4; padding: 20px; border-radius: 10px; margin: 20px 0; border-right: 4px solid #ffa726;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">⚠️ הנחות שניתנו (ידועות לרוני מראש):</h4>
+                        
+                        <div style="margin: 15px 0; padding: 12px; background: white; border-radius: 6px;">
+                            <p style="font-size: 16px; margin: 5px 0;"><strong>1️⃣ הנחה - מפתח זוטר (לא בכיר)</strong></p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">מחיר מופחת: ₪80/שעה</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #d32f2f;"><strong>חיסכון: ₪40/שעה × 600 = ₪24,000 (33%)</strong></p>
+                        </div>
+                        
+                        <div style="margin: 15px 0; padding: 12px; background: white; border-radius: 6px;">
+                            <p style="font-size: 16px; margin: 5px 0;"><strong>2️⃣ הנחה - פיתוח איטי יותר</strong></p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">חוסר ניסיון מוכר מראש</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">מחיר מופחת נוסף: ₪60/שעה</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #d32f2f;"><strong>חיסכון נוסף: ₪20/שעה × 600 = ₪12,000 (25%)</strong></p>
+                        </div>
+                        
+                        <div style="margin: 15px 0; padding: 12px; background: white; border-radius: 6px;">
+                            <p style="font-size: 16px; margin: 5px 0;"><strong>3️⃣ הנחה - RTL Debugging</strong></p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">תופעה ידועה בפיתוח Right-to-Left</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">אפילו מקצוענים בכירים מתקשים במשך שעות!</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #666;">מחיר סופי: ₪40/שעה</p>
+                            <p style="font-size: 14px; margin: 5px 0; color: #d32f2f;"><strong>חיסכון נוסף: ₪20/שעה × 600 = ₪12,000 (33%)</strong></p>
+                        </div>
+                        
+                        <div style="background: #c8e6c9; padding: 15px; border-radius: 8px; margin-top: 15px; border: 2px solid #4caf50;">
+                            <p style="font-size: 18px; margin: 5px 0;"><strong>מחיר מלא:</strong> ₪72,000</p>
+                            <p style="font-size: 18px; margin: 5px 0; color: #388e3c;"><strong>סה״כ הנחות:</strong> -₪48,000 (67%!)</p>
+                            <hr style="border: 2px solid #4caf50; margin: 10px 0;">
+                            <p style="font-size: 24px; margin: 5px 0; color: #1b5e20;"><strong>מחיר סופי: ₪24,000</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e1bee7; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                        <h4 style="color: #6a1b9a; margin-bottom: 15px;">📊 השוואה לשוק</h4>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr style="background: #ce93d8;">
+                                <th style="padding: 10px; text-align: right; border: 1px solid #9c27b0;">סוג מפתח</th>
+                                <th style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">מחיר/שעה</th>
+                                <th style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">600 שעות</th>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #9c27b0;">חברת פיתוח</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪150-200</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪90,000-120,000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #9c27b0;">פרילנסר בכיר</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪120-150</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪72,000-90,000</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border: 1px solid #9c27b0;">פרילנסר ביניים</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪80-100</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪48,000-60,000</td>
+                            </tr>
+                            <tr style="background: #c8e6c9; font-weight: bold;">
+                                <td style="padding: 10px; border: 1px solid #9c27b0;">אבשי (זוטר) ✅</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪40</td>
+                                <td style="padding: 10px; text-align: center; border: 1px solid #9c27b0;">₪24,000</td>
+                            </tr>
+                        </table>
+                        <p style="margin-top: 15px; font-size: 16px; color: #4a148c; text-align: center;"><strong>חיסכון לרוני: ₪48,000-96,000!</strong></p>
+                    </div>
+                    
+                    <div style="background: #ffebee; padding: 25px; border-radius: 10px; margin-top: 20px; border: 3px solid #d32f2f;">
+                        <h4 style="color: #b71c1c; margin-bottom: 15px; text-align: center;">⚖️ הבהרה קריטית לבית המשפט</h4>
+                        
+                        <p style="font-size: 16px; line-height: 1.8; margin-bottom: 15px;">
+                            <strong>ד״ר רוני עלול לטעון</strong> שהשימוש הרב ב-AI tools (Claude, ChatGPT) היה "בזבזני" ויקר.
+                        </p>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 8px; margin: 15px 0;">
+                            <p style="font-size: 16px; margin-bottom: 10px;"><strong>תשובתי:</strong></p>
+                            <ol style="font-size: 15px; line-height: 1.8; margin-right: 20px;">
+                                <li>רוני ידע מראש שאני מפתח זוטר</li>
+                                <li><strong>מחיר שעתי מעולם לא הוסכם בינינו</strong></li>
+                                <li>השימוש ב-AI היה חלק בלתי נפרד מהעבודה</li>
+                                <li>המחיר המוצג (₪40/שעה) הוא לצורך הצגה בלבד</li>
+                                <li>המחיר משקף את רמת הניסיון - עם הנחה של 67%!</li>
+                            </ol>
+                        </div>
+                        
+                        <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 15px 0; border-right: 4px solid #ff6f00;">
+                            <p style="font-size: 16px; margin-bottom: 10px;"><strong>🎯 אם רוני רצה מפתח בכיר שלא צריך AI:</strong></p>
+                            <ul style="font-size: 15px; line-height: 1.8; margin-right: 20px;">
+                                <li>היה צריך לשלם ₪120/שעה (לא ₪40!)</li>
+                                <li>היה מקבל עבודה מהירה יותר</li>
+                                <li>היה משלם ₪72,000 במקום ₪24,000</li>
+                            </ul>
+                            <p style="font-size: 16px; margin-top: 15px; color: #e65100;">
+                                <strong>רוני בחר במודע באופציה הזולה - ועכשיו לא יכול להתלונן על התוצאות של הבחירה שלו!</strong>
+                            </p>
+                        </div>
+                        
+                        <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 15px 0; border: 2px solid #4caf50;">
+                            <p style="font-size: 16px; margin-bottom: 10px;"><strong>💡 רוני יודע בדיוק מה זה עולה:</strong></p>
+                            <p style="font-size: 15px; line-height: 1.8;">
+                                במשך שנה שלמה, רוני פיתח בעצמו אתר "אנציקלופדיה" אישי.<br>
+                                הוא שילם בעצמו עבור ChatGPT, ניסויים עם שרתים, פלטפורמות, וכלים שונים.<br>
+                                הוא השקיע אלפי שעות מזמנו האישי.<br><br>
+                                <strong style="color: #2e7d32; font-size: 17px;">
+                                אם רוני יהיה כנה מספיק להציג את חיובי כרטיס האשראי שלו<br>
+                                ואת אלפי השעות שהשקיע בפרויקט שלו,<br>
+                                בית המשפט יראה בבירור ש:</strong>
+                            </p>
+                            <ol style="font-size: 15px; line-height: 1.8; margin: 15px 20px; color: #1b5e20;">
+                                <li><strong>הצעתי של ₪24,000 עבור 2 אתרים מלאים היא עסקה אמיתית</strong></li>
+                                <li><strong>המחיר מוצדק לחלוטין בהשוואה למה שרוני בעצמו שילם</strong></li>
+                                <li><strong>רוני מבין היטב כמה עולה פיתוח עם AI tools</strong></li>
+                            </ol>
+                        </div>
+                        
+                        <div style="background: #fce4ec; padding: 20px; border-radius: 8px; margin-top: 15px; border: 2px solid #c2185b;">
+                            <p style="font-size: 17px; text-align: center; color: #880e4f; line-height: 1.8;">
+                                <strong>🎯 Bottom Line:</strong><br>
+                                You get what you pay for.<br><br>
+                                רוני רצה "זול" - קיבל שירות במחיר זול.<br>
+                                הוא חסך ₪48,000-96,000 לעומת השוק.<br><br>
+                                <strong style="font-size: 19px;">ועכשיו הוא מתלונן?!</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 20px;">
                         <a href="https://effrprhbrtplfxincfkb.supabase.co/storage/v1/object/public/invoices/proforma_workhours.pdf" 
                            target="_blank" 
-                           style="background: #f57c00; color: white; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-size: 18px; font-weight: bold; transition: all 0.3s; display: inline-block;"
+                           style="background: #f57c00; color: white; padding: 15px 40px; border-radius: 10px; text-decoration: none; font-size: 20px; font-weight: bold; transition: all 0.3s; display: inline-block; box-shadow: 0 4px 10px rgba(0,0,0,0.2);"
                            onmouseover="this.style.background='#e65100'; this.style.transform='translateY(-2px)'"
                            onmouseout="this.style.background='#f57c00'; this.style.transform='translateY(0)'">
-                            💾 הורד חשבונית PDF
+                            💾 הורד פרופורמה PDF
                         </a>
                     </div>
                 </div>
@@ -741,34 +881,485 @@
                 </div>
             </div>
 
-            <div id="portfolio" class="tab-content">
-                <h2 style="font-size: 36px; margin-bottom: 30px;">💼 עבודות שביצעתי</h2>
+            <div id="worksummary" class="tab-content">
+                <h2 style="font-size: 36px; margin-bottom: 30px;">💼 סיכום מקצועי - דו״ח עבודה מפורט</h2>
                 
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <h3 style="font-size: 32px; margin-bottom: 15px;">📊 סיכום ביצועים</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">600</div>
+                            <div style="font-size: 18px;">שעות עבודה</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">2</div>
+                            <div style="font-size: 18px;">אתרים מלאים</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">6</div>
+                            <div style="font-size: 18px;">חודשי עבודה</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">$7.5K</div>
+                            <div style="font-size: 18px;">הכנסות שהניבה עבודתי</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 20px 0;">
-                    <h3 style="color: #1976d2; font-size: 24px; margin-bottom: 15px;">🌐 קליניקה לדיקור TCM</h3>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        <strong>אפליקציה לניהול קליניקה לדיקור עם אנציקלופדית מידע מנוהלת בבינה מלאכותית</strong>
-                    </p>
-                    <p style="color: #666; margin: 10px 0;">400 שעות עבודה</p>
+                    <h3 style="color: #1976d2; font-size: 28px; margin-bottom: 20px;">📅 תקופת העבודה</h3>
+                    <div style="font-size: 18px; line-height: 2;">
+                        <p><strong>התחלה:</strong> אוגוסט 2025</p>
+                        <p><strong>סיום:</strong> פברואר 2026</p>
+                        <p><strong>משך:</strong> 6 חודשים</p>
+                        <p><strong>ממוצע:</strong> ~100 שעות/חודש (~25 שעות/שבוע)</p>
+                    </div>
                 </div>
 
                 <div style="background: #f3e5f5; padding: 30px; border-radius: 15px; margin: 20px 0;">
-                    <h3 style="color: #7b1fa2; font-size: 24px; margin-bottom: 15px;">🌴 רטריט יוגה ורפואה סינית</h3>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        <strong>Welikande Estate - ינואר 14-24, 2026</strong>
-                    </p>
-                    <p style="color: #666; margin: 10px 0;">אתר שיווקי: 6 לקוחות = $7,500</p>
-                    <a href="https://preeminent-liger-70a2fa.netlify.app/" target="_blank" class="portfolio-link">
-                        🔗 צפה באתר הרטריט
-                    </a>
+                    <h3 style="color: #7b1fa2; font-size: 28px; margin-bottom: 20px;">🎯 פרויקט 1: אתר קליניקה לרפואה סינית (TCM)</h3>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">📋 תיאור הפרויקט</h4>
+                        <p style="font-size: 16px; line-height: 1.8;">
+                            אפליקציית ווב מלאה לניהול קליניקה לדיקור סיני עם מערכת חיפוש מתקדמת מבוססת בינה מלאכותית.
+                            האתר כולל אנציקלופדיה מקיפה של מידע רפואי בעברית עם יכולות חיפוש חכמות.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">⚙️ רכיבים טכניים</h4>
+                        <ul style="font-size: 16px; line-height: 2; margin-right: 20px;">
+                            <li><strong>411 שאלות בעברית</strong> - תוכן מקצועי מלא</li>
+                            <li><strong>מנוע חיפוש AI</strong> - אינטגרציה עם Claude API</li>
+                            <li><strong>ממשק RTL</strong> - עיצוב עברית מלא מימין לשמאל</li>
+                            <li><strong>מערכת ניהול</strong> - ממשק לניהול תוכן</li>
+                            <li><strong>אופטימיזציה</strong> - ביצועים גבוהים וחוויית משתמש</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">🛠️ טכנולוגיות בשימוש</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span style="background: #e1bee7; padding: 8px 15px; border-radius: 20px; font-size: 14px;">HTML/CSS/JavaScript</span>
+                            <span style="background: #e1bee7; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Supabase</span>
+                            <span style="background: #e1bee7; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Claude API</span>
+                            <span style="background: #e1bee7; padding: 8px 15px; border-radius: 20px; font-size: 14px;">RTL Design</span>
+                            <span style="background: #e1bee7; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin: 15px 0; border-right: 4px solid #4caf50;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">📊 סטטיסטיקות</h4>
+                        <p style="font-size: 16px; margin: 5px 0;"><strong>שעות עבודה:</strong> ~400 שעות</p>
+                        <p style="font-size: 16px; margin: 5px 0;"><strong>סטטוס:</strong> ✅ הושלם ופעיל</p>
+                    </div>
                 </div>
 
                 <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 20px 0;">
-                    <h3 style="color: #e65100; font-size: 24px; margin-bottom: 15px;">📱 קמפיינים בפייסבוק</h3>
-                    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-                        <strong>עיצוב + תוכן + ניהול קמפיינים</strong>
-                    </p>
-                    <p style="color: #666; margin: 10px 0;">תוצאה: 6 לקוחות, $7,500</p>
+                    <h3 style="color: #e65100; font-size: 28px; margin-bottom: 20px;">🌴 פרויקט 2: אתר רטריט יוגה ורפואה סינית</h3>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">📋 תיאור הפרויקט</h4>
+                        <p style="font-size: 16px; line-height: 1.8;">
+                            אתר שיווקי מלא לרטריט יוגה ורפואה סינית בסרי לנקה.
+                            האתר כלל מערכת הזמנות, גלריית תמונות, מידע מפורט על התוכנית, ואינטגרציה עם תשלומים.
+                        </p>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">⚙️ רכיבים טכניים</h4>
+                        <ul style="font-size: 16px; line-height: 2; margin-right: 20px;">
+                            <li><strong>עיצוב ויזואלי</strong> - ממשק אטרקטיבי ומושך</li>
+                            <li><strong>מערכת הזמנות</strong> - טופס רישום ומעקב</li>
+                            <li><strong>גלריה</strong> - תצוגת תמונות מקצועית</li>
+                            <li><strong>תוכן שיווקי</strong> - מידע מפורט על התוכנית</li>
+                            <li><strong>אופטימיזציה למובייל</strong> - חוויה מושלמת במובייל</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #e65100; margin-bottom: 15px;">🛠️ טכנולוגיות בשימוש</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <span style="background: #ffe0b2; padding: 8px 15px; border-radius: 20px; font-size: 14px;">HTML/CSS/JavaScript</span>
+                            <span style="background: #ffe0b2; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Responsive Design</span>
+                            <span style="background: #ffe0b2; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Forms</span>
+                            <span style="background: #ffe0b2; padding: 8px 15px; border-radius: 20px; font-size: 14px;">Image Gallery</span>
+                            <span style="background: #ffe0b2; padding: 8px 15px; border-radius: 20px; font-size: 14px;">SEO</span>
+                        </div>
+                    </div>
+
+                    <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin: 15px 0; border-right: 4px solid #4caf50;">
+                        <h4 style="color: #2e7d32; margin-bottom: 10px;">📊 סטטיסטיקות ותוצאות</h4>
+                        <p style="font-size: 16px; margin: 5px 0;"><strong>שעות עבודה:</strong> ~200 שעות</p>
+                        <p style="font-size: 16px; margin: 5px 0;"><strong>סטטוס:</strong> ✅ הושלם ופעיל</p>
+                        <p style="font-size: 18px; margin: 10px 0; color: #2e7d32;"><strong>תוצאות עסקיות:</strong></p>
+                        <ul style="font-size: 16px; margin-right: 20px; line-height: 2;">
+                            <li><strong>6 לקוחות</strong> נרשמו דרך האתר</li>
+                            <li><strong>$7,500 הכנסות</strong> ($1,250 לכל משתתף)</li>
+                            <li><strong>₪5,400 עמלה</strong> (20%) מגיעה לי</li>
+                            <li><strong>ROI מוכח</strong> - האתר החזיר את ההשקעה!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #4caf50;">
+                    <h3 style="color: #2e7d32; font-size: 28px; margin-bottom: 20px; text-align: center;">🎯 סיכום השגים</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #2e7d32; margin-bottom: 10px;">💪 יכולות טכניות</h4>
+                            <ul style="font-size: 15px; line-height: 1.8; margin-right: 20px;">
+                                <li>פיתוח Full-Stack</li>
+                                <li>אינטגרציה עם AI (Claude API)</li>
+                                <li>עיצוב RTL מורכב</li>
+                                <li>ניהול בסיסי נתונים</li>
+                                <li>אופטימיזציה וביצועים</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #2e7d32; margin-bottom: 10px;">✅ תוצרים</h4>
+                            <ul style="font-size: 15px; line-height: 1.8; margin-right: 20px;">
+                                <li>2 אתרים מלאים ופעילים</li>
+                                <li>411 שאלות בעברית</li>
+                                <li>מערכת חיפוש AI</li>
+                                <li>מערכת הזמנות רטריט</li>
+                                <li>תיעוד ותחזוקה</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 10px;">
+                            <h4 style="color: #2e7d32; margin-bottom: 10px;">💰 ערך עסקי</h4>
+                            <ul style="font-size: 15px; line-height: 1.8; margin-right: 20px;">
+                                <li>הכנסות מוכחות: $7,500</li>
+                                <li>6 לקוחות דרך האתר</li>
+                                <li>פלטפורמה לעתיד</li>
+                                <li>תשתית להרחבה</li>
+                                <li>ROI חיובי מיידי</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #fff3cd; padding: 30px; border-radius: 15px; margin: 20px 0; border: 3px solid #ffc107;">
+                    <h3 style="color: #f57c00; font-size: 24px; margin-bottom: 20px;">⚠️ אתגרים שהתגברתי עליהם</h3>
+                    <div style="font-size: 16px; line-height: 2;">
+                        <p><strong>1. RTL (Right-to-Left) Development:</strong></p>
+                        <p style="margin: 10px 20px; color: #666;">
+                            פיתוח בעברית עם כיוון ימין-שמאל הוא אתגר ידוע בתעשייה. גם מפתחים בכירים מבזבזים שעות רבות על debugging RTL.
+                            התמודדתי עם בעיות alignment, positioning, ו-layout במשך כל הפרויקט.
+                        </p>
+                        
+                        <p style="margin-top: 15px;"><strong>2. חוסר ניסיון:</strong></p>
+                        <p style="margin: 10px 20px; color: #666;">
+                            כמפתח זוטר, נדרשתי ללמוד טכנולוגיות חדשות תוך כדי עבודה. השימוש ב-AI tools (Claude, ChatGPT) 
+                            היה הכרחי וחיסך לרוני עשרות אלפי שקלים לעומת שכירת מפתח בכיר.
+                        </p>
+                        
+                        <p style="margin-top: 15px;"><strong>3. אינטגרציה מורכבת:</strong></p>
+                        <p style="margin: 10px 20px; color: #666;">
+                            שילוב Claude API עם מערכת החיפוש, ניהול 411 שאלות, ויצירת חוויית משתמש חלקה דרש פתרונות יצירתיים רבים.
+                        </p>
+                    </div>
+                </div>
+
+                <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 30px;">
+                    <h3 style="font-size: 32px; margin-bottom: 20px;">🏆 סיכום תוצאות</h3>
+                    <div style="font-size: 20px; line-height: 2;">
+                        <p><strong>600 שעות עבודה מסורה</strong></p>
+                        <p><strong>2 פרויקטים מוצלחים</strong></p>
+                        <p><strong>$7,500 הכנסות ישירות</strong></p>
+                        <p><strong>תשתית טכנולוגית לעתיד</strong></p>
+                        <hr style="border: 2px solid white; margin: 20px 0; opacity: 0.5;">
+                        <p style="font-size: 24px; margin-top: 20px;"><strong>ערך שנמסר: ₪24,000</strong></p>
+                        <p style="font-size: 18px; opacity: 0.9;">67% הנחה מהמחיר הסטנדרטי בשוק!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="portfolio" class="tab-content">
+                <h2 style="font-size: 36px; margin-bottom: 30px;">🎯 תוצרים - מה נמסר לרוני</h2>
+
+                <!-- Executive Summary -->
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 30px;">
+                    <h3 style="font-size: 32px; margin-bottom: 15px;">📊 סיכום ביצועים</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">600</div>
+                            <div style="font-size: 18px;">שעות עבודה</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">2</div>
+                            <div style="font-size: 18px;">פרויקטים מלאים</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">6</div>
+                            <div style="font-size: 18px;">חודשי עבודה</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px;">
+                            <div style="font-size: 48px; font-weight: bold;">$7.5K</div>
+                            <div style="font-size: 18px;">הכנסות שהניבה עבודתי</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <h3 style="color: #1976d2; font-size: 28px; margin-bottom: 20px;">📅 ציר זמן</h3>
+                    <div style="position: relative; padding: 20px 0;">
+                        <div style="position: absolute; right: 50%; width: 4px; background: #2196f3; height: 100%;"></div>
+                        
+                        <div style="position: relative; padding: 20px; margin-bottom: 20px;">
+                            <div style="background: white; padding: 20px; border-radius: 10px; width: 45%; margin-right: auto; border: 2px solid #2196f3;">
+                                <h4 style="color: #1976d2; margin-bottom: 10px;">📍 אוגוסט 2025</h4>
+                                <p style="font-size: 16px;"><strong>התחלת פרויקט קליניקת TCM</strong></p>
+                                <p style="color: #666; font-size: 14px;">הקמת מערכת ניהול קליניקה מבוססת AI</p>
+                            </div>
+                        </div>
+                        
+                        <div style="position: relative; padding: 20px; margin-bottom: 20px;">
+                            <div style="background: white; padding: 20px; border-radius: 10px; width: 45%; margin-left: auto; border: 2px solid #7b1fa2;">
+                                <h4 style="color: #7b1fa2; margin-bottom: 10px;">📍 נובמבר 2025</h4>
+                                <p style="font-size: 16px;"><strong>התחלת פרויקט אתר רטריט</strong></p>
+                                <p style="color: #666; font-size: 14px;">אתר שיווקי לרטריט יוגה ורפואה סינית בסרי לנקה</p>
+                            </div>
+                        </div>
+                        
+                        <div style="position: relative; padding: 20px; margin-bottom: 20px;">
+                            <div style="background: white; padding: 20px; border-radius: 10px; width: 45%; margin-right: auto; border: 2px solid #4caf50;">
+                                <h4 style="color: #2e7d32; margin-bottom: 10px;">📍 ינואר 2026</h4>
+                                <p style="font-size: 16px;"><strong>הרטריט התקיים בהצלחה!</strong></p>
+                                <p style="color: #666; font-size: 14px;">6 משתתפים × $1,250 = $7,500 הכנסות</p>
+                            </div>
+                        </div>
+                        
+                        <div style="position: relative; padding: 20px;">
+                            <div style="background: white; padding: 20px; border-radius: 10px; width: 45%; margin-left: auto; border: 2px solid #d32f2f;">
+                                <h4 style="color: #c62828; margin-bottom: 10px;">📍 פברואר 2026</h4>
+                                <p style="font-size: 16px;"><strong>סיום פרויקטים</strong></p>
+                                <p style="color: #666; font-size: 14px;">2 אתרים מלאים, 600 שעות, דרישת תשלום</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1: TCM Clinic -->
+                <div style="background: #e3f2fd; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #2196f3;">
+                    <h3 style="color: #1976d2; font-size: 24px; margin-bottom: 15px;">🏥 פרויקט 1: קליניקת TCM - מערכת ניהול מתקדמת</h3>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #1976d2; margin-bottom: 15px;">📋 תיאור הפרויקט</h4>
+                        <p style="font-size: 16px; line-height: 1.8;">
+                            <strong>מערכת ניהול קליניקה מקיפה לרפואה סינית מסורתית (TCM)</strong> עם אנציקלופדיית מידע מנוהלת בינה מלאכותית.
+                            המערכת כוללת 411 שאלות בעברית, מנוע חיפוש AI מתקדם, וממשק משתמש אינטואיטיבי.
+                        </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #1976d2; margin-bottom: 15px;">⚙️ טכנולוגיות ויכולות</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>🤖 AI Integration</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Claude API, ChatGPT</p>
+                            </div>
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>💾 Database</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Supabase (PostgreSQL)</p>
+                            </div>
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>🎨 Frontend</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">HTML, CSS, JavaScript</p>
+                            </div>
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>🔍 Search Engine</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">AI-powered semantic search</p>
+                            </div>
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>🌐 RTL Support</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Full Hebrew interface</p>
+                            </div>
+                            <div style="padding: 15px; background: #e3f2fd; border-radius: 8px;">
+                                <strong>📱 Responsive</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Mobile & Desktop</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #1976d2; margin-bottom: 15px;">🎯 תוצרים מרכזיים</h4>
+                        <ul style="font-size: 16px; line-height: 2; margin-right: 20px;">
+                            <li>✅ 411 שאלות ותשובות בעברית</li>
+                            <li>✅ מנוע חיפוש AI מתקדם</li>
+                            <li>✅ ממשק ניהול תוכן</li>
+                            <li>✅ מערכת authentication</li>
+                            <li>✅ Dashboard לניתוח שימוש</li>
+                            <li>✅ אינטגרציה עם Claude API</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin-top: 15px;">
+                        <p style="font-size: 18px;"><strong>⏱️ זמן עבודה:</strong> ~400 שעות</p>
+                        <p style="font-size: 18px;"><strong>📅 תקופה:</strong> אוגוסט 2025 - ינואר 2026</p>
+                    </div>
+                </div>
+
+                <!-- Project 2: Retreat Website -->
+                <div style="background: #f3e5f5; padding: 30px; border-radius: 15px; margin: 20px 0; border-right: 5px solid #7b1fa2;">
+                    <h3 style="color: #7b1fa2; font-size: 24px; margin-bottom: 15px;">🌴 פרויקט 2: אתר רטריט - Welikande Estate</h3>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">📋 תיאור הפרויקט</h4>
+                        <p style="font-size: 16px; line-height: 1.8;">
+                            <strong>אתר שיווקי מלא לרטריט יוגה ורפואה סינית בסרי לנקה.</strong>
+                            האתר כלל מערכת הזמנות, עמוד נחיתה מרשים, תיאורי פעילויות, ופרטי תשלום.
+                            הרטריט התקיים בהצלחה בינואר 2026 עם 6 משתתפים.
+                        </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">⚙️ טכנולוגיות ויכולות</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>🎨 Modern Design</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Responsive, beautiful UI</p>
+                            </div>
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>📝 Booking System</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Multi-step registration</p>
+                            </div>
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>💳 Payment Info</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Pricing, schedules</p>
+                            </div>
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>🌐 Multilingual</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Hebrew & English</p>
+                            </div>
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>📱 Mobile-First</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Optimized for phones</p>
+                            </div>
+                            <div style="padding: 15px; background: #f3e5f5; border-radius: 8px;">
+                                <strong>🚀 Fast Loading</strong>
+                                <p style="font-size: 14px; color: #666; margin-top: 5px;">Optimized performance</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #7b1fa2; margin-bottom: 15px;">🎯 תוצרים מרכזיים</h4>
+                        <ul style="font-size: 16px; line-height: 2; margin-right: 20px;">
+                            <li>✅ Landing page מרשים עם תמונות</li>
+                            <li>✅ מערכת הזמנות רב-שלבית</li>
+                            <li>✅ תיאור מפורט של פעילויות</li>
+                            <li>✅ מחירון ולוח זמנים</li>
+                            <li>✅ פרטי צוות ומנחים</li>
+                            <li>✅ אינטגרציה עם WhatsApp</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #c8e6c9; padding: 20px; border-radius: 10px; margin-top: 15px;">
+                        <p style="font-size: 18px;"><strong>⏱️ זמן עבודה:</strong> ~200 שעות</p>
+                        <p style="font-size: 18px;"><strong>📅 תקופה:</strong> נובמבר 2025 - דצמבר 2025</p>
+                        <p style="font-size: 20px; color: #2e7d32; margin-top: 10px;"><strong>💰 תוצאה:</strong> 6 לקוחות × $1,250 = <strong>$7,500 הכנסות!</strong></p>
+                        <a href="https://preeminent-liger-70a2fa.netlify.app/" target="_blank" style="display: inline-block; margin-top: 15px; background: #7b1fa2; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+                            🔗 צפה באתר הרטריט
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Skills & Tools -->
+                <div style="background: #fff3e0; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <h3 style="color: #e65100; font-size: 24px; margin-bottom: 20px;">🛠️ כישורים וכלים שהשתמשתי בהם</h3>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-right: 3px solid #ff9800;">
+                            <h4 style="color: #e65100; margin-bottom: 10px;">💻 Development</h4>
+                            <ul style="font-size: 14px; line-height: 1.8; margin-right: 15px;">
+                                <li>HTML5, CSS3</li>
+                                <li>JavaScript (ES6+)</li>
+                                <li>Responsive Design</li>
+                                <li>RTL Development</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-right: 3px solid #ff9800;">
+                            <h4 style="color: #e65100; margin-bottom: 10px;">🤖 AI Tools</h4>
+                            <ul style="font-size: 14px; line-height: 1.8; margin-right: 15px;">
+                                <li>Claude API</li>
+                                <li>ChatGPT</li>
+                                <li>GenSpark</li>
+                                <li>Cursor IDE</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-right: 3px solid #ff9800;">
+                            <h4 style="color: #e65100; margin-bottom: 10px;">💾 Backend</h4>
+                            <ul style="font-size: 14px; line-height: 1.8; margin-right: 15px;">
+                                <li>Supabase</li>
+                                <li>PostgreSQL</li>
+                                <li>Authentication</li>
+                                <li>APIs Integration</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="background: white; padding: 15px; border-radius: 8px; border-right: 3px solid #ff9800;">
+                            <h4 style="color: #e65100; margin-bottom: 10px;">🎨 Design</h4>
+                            <ul style="font-size: 14px; line-height: 1.8; margin-right: 15px;">
+                                <li>UI/UX Design</li>
+                                <li>Mobile-First</li>
+                                <li>Color Theory</li>
+                                <li>Typography</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Challenges & Solutions -->
+                <div style="background: #ffebee; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <h3 style="color: #c62828; font-size: 24px; margin-bottom: 20px;">🎯 אתגרים שפתרתי</h3>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #d32f2f; margin-bottom: 10px;">1️⃣ RTL (Right-to-Left) Development</h4>
+                        <p style="font-size: 15px; line-height: 1.7; color: #666;">
+                            <strong>אתגר:</strong> פיתוח בעברית עם RTL הוא תופעה מורכבת שגם מקצוענים בכירים מתקשים איתה.<br>
+                            <strong>פתרון:</strong> השקעת שעות רבות בלמידה, ניסוי וטעייה, שימוש ב-AI tools לפתרון בעיות מורכבות.
+                        </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #d32f2f; margin-bottom: 10px;">2️⃣ AI Integration</h4>
+                        <p style="font-size: 15px; line-height: 1.7; color: #666;">
+                            <strong>אתגר:</strong> אינטגרציה של Claude API לחיפוש סמנטי מתקדם.<br>
+                            <strong>פתרון:</strong> בניית ארכיטקטורת multi-query, אופטימיזציה של תגובות, ניהול עלויות.
+                        </p>
+                    </div>
+                    
+                    <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0;">
+                        <h4 style="color: #d32f2f; margin-bottom: 10px;">3️⃣ Database Design</h4>
+                        <p style="font-size: 15px; line-height: 1.7; color: #666;">
+                            <strong>אתגר:</strong> תכנון מסד נתונים יעיל עבור 411 שאלות + תשובות.<br>
+                            <strong>פתרון:</strong> שימוש ב-Supabase עם PostgreSQL, אינדקסים מותאמים, query optimization.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Results Summary -->
+                <div style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-top: 30px;">
+                    <h3 style="font-size: 32px; margin-bottom: 20px;">🏆 תוצאות ביצועים</h3>
+                    <div style="font-size: 20px; line-height: 2;">
+                        <p>✅ 2 פרויקטים מלאים הושלמו בהצלחה</p>
+                        <p>✅ 600 שעות עבודה מושקעות</p>
+                        <p>✅ 6 חודשי פיתוח רצוף</p>
+                        <p>✅ $7,500 הכנסות ישירות מהרטריט</p>
+                        <p>✅ מערכת TCM מתקדמת עם 411 שאלות</p>
+                        <p>✅ שימוש בטכנולוגיות חדשניות (AI, Supabase)</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.2); padding: 25px; border-radius: 15px; margin-top: 30px;">
+                        <p style="font-size: 24px; font-weight: bold;">💰 ערך שנוצר: ₪72,000+ (מחיר שוק)</p>
+                        <p style="font-size: 24px; font-weight: bold;">💵 עלות לרוני: ₪24,000 (67% הנחה!)</p>
+                    </div>
                 </div>
             </div>
         </div>
