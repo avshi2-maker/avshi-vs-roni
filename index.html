@@ -364,6 +364,9 @@
         <div class="header">
             <h1>⚖️ אבשי ספיר נגד ד״ר רוני ספיר</h1>
             <h2 style="color: #666; font-size: 24px;">פורטל ראיות משפטי</h2>
+            <p style="color: #999; font-size: 16px; margin-top: 15px;">
+                📅 עדכון אחרון: <span id="lastUpdated">21 בפברואר 2026</span>
+            </p>
         </div>
 
         <div class="tabs">
@@ -393,8 +396,8 @@
                         <div style="font-size: 18px;">שעות עבודה</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-number">₪38,065</div>
-                        <div style="font-size: 18px;">חוב בסיס</div>
+                        <div class="stat-number">₪39,770</div>
+                        <div style="font-size: 18px;">חוב כולל</div>
                     </div>
                 </div>
 
@@ -600,7 +603,7 @@
                 <h3 style="color: #1565c0; margin-bottom: 15px;">📅 תאריכים</h3>
                 <div class="calc-row">
                     <span><strong>תאריך החוב המקורי:</strong></span>
-                    <span>20 בפברואר 2026</span>
+                    <span>15 בפברואר 2026</span>
                 </div>
                 <div class="calc-row">
                     <span><strong>תאריך צפייה נוכחי:</strong></span>
@@ -616,7 +619,7 @@
                 <h3 style="color: #1565c0; margin-bottom: 15px;">💰 סכומים</h3>
                 <div class="calc-row">
                     <span><strong>חוב בסיס:</strong></span>
-                    <span>₪38,065.00</span>
+                    <span>₪39,770.00</span>
                 </div>
                 <div class="calc-row">
                     <span><strong>שיעור ריבית שנתי:</strong></span>
@@ -624,7 +627,7 @@
                 </div>
                 <div class="calc-row">
                     <span><strong>ריבית יומית:</strong></span>
-                    <span>₪14.08</span>
+                    <span>₪14.71</span>
                 </div>
             </div>
 
@@ -632,7 +635,7 @@
                 <h3 style="color: #1565c0; margin-bottom: 15px;">🧮 חישוב</h3>
                 <div class="calc-row">
                     <span><strong>נוסחה:</strong></span>
-                    <span style="font-family: monospace;">ימים × ₪14.08</span>
+                    <span style="font-family: monospace;">ימים × ₪14.71</span>
                 </div>
                 <div class="calc-row">
                     <span><strong>חישוב:</strong></span>
@@ -689,11 +692,11 @@
         }
 
         function calculateDebt() {
-            const base = 38065;
-            const startDate = new Date('2026-02-20');
+            const base = 39770;
+            const startDate = new Date('2026-02-15');
             const now = new Date();
             const days = Math.floor((now - startDate) / 86400000);
-            const dailyRate = 14.08;
+            const dailyRate = 14.71;
             const interest = days * dailyRate;
             const total = base + interest;
             
@@ -713,7 +716,7 @@
             
             document.getElementById('calc-view-date').textContent = debt.now.toLocaleDateString('he-IL', options);
             document.getElementById('calc-days-late').textContent = `${debt.days} ימים`;
-            document.getElementById('calc-formula').textContent = `${debt.days} × ₪14.08 = ₪${debt.interest.toFixed(2)}`;
+            document.getElementById('calc-formula').textContent = `${debt.days} × ₪14.71 = ₪${debt.interest.toFixed(2)}`;
             document.getElementById('calc-interest').textContent = `₪${debt.interest.toLocaleString('he-IL', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             document.getElementById('calc-total').textContent = `₪${debt.total.toLocaleString('he-IL', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             
@@ -984,6 +987,15 @@
 
         updateQuickCalc();
         setInterval(updateQuickCalc, 3600000);
+
+        // Update last modified date
+        function updateLastModified() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const hebrewDate = now.toLocaleDateString('he-IL', options);
+            document.getElementById('lastUpdated').textContent = hebrewDate;
+        }
+        updateLastModified();
     </script>
 </body>
 </html>
